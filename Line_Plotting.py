@@ -23,8 +23,14 @@ ax.plot(x, ysin, color = "black", marker = "s", markevery = 1,
 ax.plot(x, ycos, color = "red", marker = "o", markevery = 1, 
         markersize = 8, linestyle = "dashed", linewidth=2.0, 
         label = "y = cos(2*x)")
+# 设置坐标轴名称
 ax.set_xlabel("x")
 ax.set_ylabel("y")
+# 设置坐标轴范围
+plt.xlim(-0.1, 10.1)
+plt.ylim(-1.1,1.5)
 ax.legend()
 
 plt.show()
+# 将所绘制图保存为png格式图片
+fig.savefig("Line.png", dpi=1200)
